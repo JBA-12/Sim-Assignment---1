@@ -15,7 +15,7 @@ err = [] #declaring probability list
 #randvar = np.loadtxt('gau.dat',dtype='double')
 
 #Question-3.1
-randvar = np.loadtxt('V.dat',dtype='double')
+#randvar = np.loadtxt('V.dat',dtype='double')
 
 for i in range(0,30):
 	err_ind = np.nonzero(randvar < x[i]) #checking probability condition
