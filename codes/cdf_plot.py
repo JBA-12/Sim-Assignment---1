@@ -16,7 +16,7 @@ err = [] #declaring probability list
 #randvar = np.loadtxt('gau.dat',dtype='double')
 
 #Question-3.1
-randvar = np.loadtxt('V.dat',dtype='double')
+#randvar = np.loadtxt('V.dat',dtype='double')
 
 for i in range(0,30):
 	err_ind = np.nonzero(randvar < x[i]) #checking probability condition
@@ -42,10 +42,10 @@ for i in range(0,30):
 #vec_gau_cdf = scipy.vectorize(gau_cdf, otypes=[float])	
 
 #Question-3.1
-def v_cdf(x):
-	if x>0: return 1-mp.exp(-x/2.0)
-	else: return 0
-vec_v_cdf = scipy.vectorize(v_cdf, otypes=[float])
+#def v_cdf(x):
+#	if x>0: return 1-mp.exp(-x/2.0)
+#	else: return 0
+#vec_v_cdf = scipy.vectorize(v_cdf, otypes=[float])
 	
 plt.plot(x.T,err, 'o')#plotting the CDF
 
@@ -56,7 +56,7 @@ plt.plot(x.T,err, 'o')#plotting the CDF
 #plt.plot(x, vec_gau_cdf(x))
 
 #Question-3.1
-plt.plot(x, vec_v_cdf(x))
+#plt.plot(x, vec_v_cdf(x))
 
 plt.grid() #creating the grid
 plt.xlabel('$x$')
@@ -72,7 +72,7 @@ plt.legend(["Numerical","Theory"])
 #plt.savefig('gau_cdf.eps')
 
 #Question-3.1
-plt.savefig('v_cdf.pdf')
-plt.savefig('v_cdf.eps')
+#plt.savefig('v_cdf.pdf')
+#plt.savefig('v_cdf.eps')
 
 plt.show()
