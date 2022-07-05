@@ -23,7 +23,7 @@ def gau_cdf(x):
 vec_gau_cdf = scipy.vectorize(gau_cdf, otypes=[float])
 
 plt.plot(x.T,err, 'o')#plotting the CDF
-plt.plot(x.T,vec_gauss_cdf(x))
+plt.plot(x.T,vec_gau_cdf(x))
 plt.grid() #creating the grid
 plt.xlabel('$x$')
 plt.ylabel('$F_X(x)$')
