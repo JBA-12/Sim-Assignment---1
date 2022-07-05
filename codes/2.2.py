@@ -8,7 +8,7 @@ x = np.linspace(-4,4,30)#points on the x axis
 simlen = int(1e6) #number of samples
 err = [] #declaring probability list
 
-#randvar = np.loadtxt('gau.dat',dtype='double')
+randvar = np.loadtxt('gau.dat',dtype='double')
 
 for i in range(0,30):
 	err_ind = np.nonzero(randvar < x[i]) #checking probability condition
