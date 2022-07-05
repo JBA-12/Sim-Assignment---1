@@ -18,15 +18,15 @@ for i in range(0,30):
   
 def uni_cdf(x):
   if x > 1:
-		return 1
-	elif x < 0:
-		return 0
-	return x
+      return 1
+  elif x < 0:
+      return 0
+  return x
 		
 vec_uni_cdf = scipy.vectorize(uni_cdf, otypes=[float])
 
 plt.plot(x.T,err, 'o')#plotting the CDF
-
+plt.plot(x, vec_uni_cdf(x))
 plt.grid() #creating the grid
 plt.xlabel('$x$')
 plt.ylabel('$F_X(x)$')
